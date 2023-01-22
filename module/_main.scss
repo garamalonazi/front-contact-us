@@ -1,0 +1,56 @@
+@import '../assets/sass/variables';
+@import '../assets/sass/general';
+@import '../assets/sass/module';
+
+
+.screen {
+	@include screen;
+	.screen-body {
+		display: flex;
+		.screen-body-item {
+			padding: toRem(50px);
+			
+		}
+		.left {
+			@include screen($color_6);
+			display: flex;
+			flex-direction: column;
+		}
+		.right {
+			@include screen($background-color_1);
+			width: toRem(200px);
+			border-top-#{$left}-radius: toRem(0px);
+			border-bottom-#{$left}-radius: toRem(0px);
+		}
+	}
+}
+@media screen and (max-width: toRem(320px)) {
+	/*.screen-body {
+		//flex-direction: column;
+	}*/
+	.screen-body-item.left {
+		margin-bottom: toRem(30px);
+	}
+	.app-title {
+		flex-direction: row;
+		span {
+			margin-right: toRem(12px);
+		}
+		&:after {
+			display: none;
+		}
+	}
+	.map {
+		display: none;
+	}
+}
+
+@media screen and (max-width: toRem(600px)) {
+	/*.screen-body {
+		padding: toRem(40px);
+	}*/
+	.screen-body-item {
+		padding: 0;
+	}
+}
+

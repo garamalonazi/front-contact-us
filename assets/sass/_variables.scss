@@ -1,0 +1,14 @@
+
+$color_1: #ea1d6f;
+$color_2: #1b0107;
+$color_3: #888;
+$color_4: rgb(14, 12, 12);
+$color_5: #666;
+$color_6: #ffffff;
+$color_7: #c9c2c5;
+$font-family_1: 'Montserrat', sans-serif;
+$background-color_1: #1a0239;
+
+@function toRem($value) {
+    @return $value / 16px * 1rem ; 
+}

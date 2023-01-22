@@ -1,0 +1,95 @@
+@import './variables';
+@import './general';
+
+
+.app-title {
+	position: relative;
+	color: $color_1;
+	font-size: 26px;
+
+	.app-title-first{
+		color: $color_2;
+	}
+    .message {
+	font-size: 8px;
+	color: $color_2;
+	margin-bottom: toRem(20px);
+	width: 350px;
+    }
+}
+
+.app-form-group {
+	margin-top: toRem(10px);
+	margin-bottom: toRem(10px);
+	width: 300px;
+	margin-left: toRem(30px);
+}
+.buttons {
+	@extend .app-form-group;
+	text-align: center;
+}
+.app-form-control {
+	width: 100%;
+	padding: 10px 0;
+	background: none;
+	border: 1px solid #666;
+	color: $color_4;
+	font-size: 10px;
+	padding-left: 10px;
+	text-align: $left;
+	&::placeholder {
+		color: $color_5;
+	}
+}
+.app-form-button {
+	@include button;
+	background: $color_1;
+	color: $color_6;
+}
+
+.language{
+	@include button;
+	background: $color_6;
+	color: $color_1;
+	
+}
+.map {
+	width: 300px;
+	height: 350px;
+	position: relative;
+	right: 230px ;
+	@if $rtl == ltr{
+		float: right;
+		right: 0px;
+		left: 50px;
+	}
+	
+
+
+}
+.contact{
+    width: 500px;
+    display: flex;
+    margin-left: 49px;
+}
+.app-contact{
+    margin-top: 20px;
+    margin-right: 10px;
+	font-size: 6px;
+    display: flex;
+    flex-direction: row;
+}
+.app-contact-type {
+	@include app-contact($color_2) ;
+}
+.app-contact-details{
+    @include app-contact($color_1) ;
+
+}
+.phone-icon {
+    width: 15px;
+    height: 15px;
+    margin-top: toRem(6px);
+    margin-#{right}: toRem(10px);
+}
+
